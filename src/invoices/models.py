@@ -21,6 +21,7 @@ class Invoice(models.Model):
     # if closed == True, then hide adding positions, and unable to add new ones
     closed = models.BooleanField(default=False)
     tag = models.ManyToManyField(Tag, blank=True)
+    #checking changes
 
     def __str__(self):
         return f"Invoice number: {self.number}, pk: {self.pk}"
